@@ -25,11 +25,8 @@ body {
 
 
 h2 {
-
     color: white;
-
     text-align: center;
-
 }
 
 
@@ -52,7 +49,6 @@ h2 {
 }
 
 
-
 .buttons {
 
     display: grid;
@@ -62,7 +58,6 @@ h2 {
     gap: 10px;
 
 }
-
 
 
 button {
@@ -80,13 +75,11 @@ button {
 }
 
 
-
 button:hover {
 
     background: #aaa;
 
 }
-
 
 
 .zero {
@@ -96,8 +89,7 @@ button:hover {
 }
 
 
-
-/* Video starts hidden */
+/* Video hidden at first */
 
 #videoBox {
 
@@ -105,20 +97,12 @@ button:hover {
 
     position: absolute;
 
-    text-align: center;
-
     background: #111;
 
     padding: 20px;
 
     border-radius: 15px;
 
-}
-
-
-
-#videoBox h2 {
-
-    color: white;
+    text-align: center;
 
 }

@@ -8,13 +8,11 @@ function append(value) {
 }
 
 
-
 function clearDisplay() {
 
     display.value = "";
 
 }
-
 
 
 function deleteNumber() {
@@ -24,14 +22,12 @@ function deleteNumber() {
 }
 
 
-
 function calculate() {
-
 
     let expression = display.value;
 
 
-    // Secret code
+    // SECRET CODE
     if (expression === "6*7") {
 
 
@@ -41,10 +37,13 @@ function calculate() {
         document.getElementById("videoBox").style.display = "block";
 
 
+        document.getElementById("secretVideo").src =
+        "https://www.youtube.com/embed/Aq5WXmQQooo?autoplay=1&mute=1";
+
+
         return;
 
     }
-
 
 
     try {
