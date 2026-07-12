@@ -1,86 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Question</title>
-
-<style>
-    body{
-        margin:0;
-        font-family:Arial, sans-serif;
-        background:#f5f5f5;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        height:100vh;
-    }
-
-    .box{
-        text-align:center;
-        background:white;
-        padding:30px;
-        border-radius:15px;
-        box-shadow:0 0 15px rgba(0,0,0,.2);
-    }
-
-    h1{
-        margin-bottom:25px;
-    }
-
-    button{
-        padding:12px 25px;
-        font-size:18px;
-        border:none;
-        border-radius:10px;
-        cursor:pointer;
-        margin:10px;
-        transition:0.3s;
-    }
-
-    #yes{
-        background:#4CAF50;
-        color:white;
-    }
-
-    #no{
-        background:#f44336;
-        color:white;
-        position:relative;
-    }
-</style>
+    <title>Secret Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="box">
-    <h1>Are you gay? 🤔</h1>
+<div class="calculator">
 
-    <button id="yes" onclick="yesAnswer()">HELL YEAH</button>
-    <button id="no" onclick="noAnswer()">Nuh uh</button>
+    <h2>Calculator</h2>
+
+    <input type="text" id="display" disabled>
+
+    <div class="buttons">
+
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteNumber()">DEL</button>
+        <button onclick="append('%')">%</button>
+        <button onclick="append('/')">÷</button>
+
+        <button onclick="append('7')">7</button>
+        <button onclick="append('8')">8</button>
+        <button onclick="append('9')">9</button>
+        <button onclick="append('*')">×</button>
+
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button onclick="append('-')">−</button>
+
+        <button onclick="append('1')">1</button>
+        <button onclick="append('2')">2</button>
+        <button onclick="append('3')">3</button>
+        <button onclick="append('+')">+</button>
+
+        <button onclick="append('0')" class="zero">0</button>
+        <button onclick="append('.')">.</button>
+        <button onclick="calculate()">=</button>
+
+    </div>
+
 </div>
 
-<script>
-let size = 1;
 
-function noAnswer(){
-    size += 0.25;
+<!-- Hidden video -->
+<div id="videoBox">
 
-    document.getElementById("yes").style.transform =
-        `scale(${size})`;
+    <h2>sybau</h2>
 
-    const no = document.getElementById("no");
-    no.style.left = (Math.random()*120-60) + "px";
-    no.style.top = (Math.random()*80-40) + "px";
-}
+    <iframe 
+        id="secretVideo"
+        width="560"
+        height="315"
+        src="https://youtu.be/Aq5WXmQQooo?si=tjmV-E8A98EDFOYp"
+        title="Secret Video"
+        allowfullscreen>
+    </iframe>
 
-function yesAnswer(){
-    document.body.innerHTML = `
-    <div style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;">
-        <h1>😂 tag an pa lge bayota ka!</h1>
-    </div>`;
-}
-</script>
+</div>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
