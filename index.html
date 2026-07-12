@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Question</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#f5f5f5;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .box{
+        text-align:center;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 0 15px rgba(0,0,0,.2);
+    }
+
+    h1{
+        margin-bottom:25px;
+    }
+
+    button{
+        padding:12px 25px;
+        font-size:18px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        margin:10px;
+        transition:0.3s;
+    }
+
+    #yes{
+        background:#4CAF50;
+        color:white;
+    }
+
+    #no{
+        background:#f44336;
+        color:white;
+        position:relative;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>Are you gay? 🤔</h1>
+
+    <button id="yes" onclick="yesAnswer()">Yes</button>
+    <button id="no" onclick="noAnswer()">No</button>
+</div>
+
+<script>
+let size = 1;
+
+function noAnswer(){
+    size += 0.25;
+
+    document.getElementById("yes").style.transform =
+        `scale(${size})`;
+
+    const no = document.getElementById("no");
+    no.style.left = (Math.random()*120-60) + "px";
+    no.style.top = (Math.random()*80-40) + "px";
+}
+
+function yesAnswer(){
+    document.body.innerHTML = `
+    <div style="display:flex;justify-content:center;align-items:center;height:100vh;font-family:Arial;">
+        <h1>😂 You clicked YES!</h1>
+    </div>`;
+}
+</script>
+
+</body>
+</html>
